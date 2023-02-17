@@ -10,11 +10,14 @@ phases:
   build:
     commands:
       - echo build Docker image on `date`
-      - cd src
-      - docker build -t group2c2-kitt-repo:latest .
-      - docker tag group2c2-kitt-repo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2c2-kitt-repo:latest
+      - docker build -t group2c2-kitt:latest .
+      - docker tag group2c2-kitt:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2c2-kitt-repo:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
       - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2c2-kitt-repos:latest
+
+
+
+      
