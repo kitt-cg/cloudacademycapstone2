@@ -12,7 +12,7 @@ phases:
       - echo build Docker image on `date`
       - cd src
       - docker build -t group2ckitttodo:latest .
-      - docker tag group2c2danhtodo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2c2-kitt-repo:latest
+      - docker tag group2c2kitttodo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/group2c2-kitt-repo:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
